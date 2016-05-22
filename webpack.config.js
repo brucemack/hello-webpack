@@ -10,6 +10,14 @@ module.exports = {
         publicPath: "/",
         filename: "bundle.js"
     },
+    devServer: {
+      proxy: {
+        "/rest/*": {
+          target: "http://localhost:3000",
+          secure: false
+        }
+      }
+    },
     plugins: [
       // This is a plugin that will perform copies
       new CopyWebpackPlugin([
@@ -27,7 +35,7 @@ module.exports = {
         // extensions) to a normal .JS
         {
           test: /\.es6?$/,
-          exclude: /(node_modules|bower_components|dist)/,
+          exclude: /(node_modules|bower_components|dist|.git)/,
           loader: 'babel-loader',
           query: {
             presets: [ 'es2015', 'react' ]
