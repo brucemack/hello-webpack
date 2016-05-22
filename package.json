@@ -1,0 +1,24 @@
+{
+  "name": "hello-webpack",
+  "version": "1.0.0",
+  "description": "This is a test",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --progress --colors --watch",
+    "dev": "webpack-dev-server --content-base dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brucemack/hello-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brucemack/hello-webpack/issues"
+  },
+  "homepage": "https://github.com/brucemack/hello-webpack",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4"
+  }
+}
