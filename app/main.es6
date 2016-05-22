@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { m } from "./module-1.es6";
 import axios from "axios";
+import { m } from "./module-1.es6";
+import { TopNav } from "./TopNav.es6"
 
 // Create a simple React component
 var App = React.createClass({
@@ -11,7 +12,6 @@ var App = React.createClass({
     };
   },
   componentWillMount() {
-    console.log("Hit");
     // Make a request for a user with a given ID
     axios.get('/rest/a')
       .then(function(response) {
@@ -27,6 +27,7 @@ var App = React.createClass({
   render() {
     return (
       <div>
+        <TopNav/>
         <h1>Hello World: {this.state.text}</h1>
       </div>
     );
