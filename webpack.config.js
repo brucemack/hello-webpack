@@ -10,6 +10,9 @@ module.exports = {
         publicPath: "/",
         filename: "bundle.js"
     },
+    resolve: {
+      extensions: ['','.js','.jsx','.es6']
+    },
     devServer: {
       proxy: {
         "/rest/*": {
@@ -36,8 +39,10 @@ module.exports = {
         {
           test: /\.es6?$/,
           exclude: /(node_modules|bower_components|dist|.git)/,
-          loader: 'babel-loader',
+          loader: 'babel',
+          exclude: "/node_modules/",
           query: {
+            cacheDirectory: true,
             presets: [ 'es2015', 'react' ]
           }
         }
