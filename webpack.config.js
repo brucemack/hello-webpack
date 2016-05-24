@@ -24,8 +24,9 @@ module.exports = {
     plugins: [
       // This is a plugin that will perform copies
       new CopyWebpackPlugin([
-        // Our local HTML
+        // Our local HTML and CSS
         { from: 'app/index.html' },
+        { from: 'app/main.css' },
         // The Bootstrap installed via NPM
         { from: 'node_modules/bootstrap/dist', to: 'assets/bootstrap' },
         // The jQuery installed via NPM
