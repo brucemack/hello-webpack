@@ -7,7 +7,7 @@ export const TopNav = React.createClass({
       <Navbar fixedTop={true} bsStyle="inverse">
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#">React-Bootstrap</a>
+            <a href="#">Hello Webpack</a>
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from "axios";
+// Demonstrate how to bring in another ES6 module:
 import { m } from "./module-1.es6";
 import { TopNav } from "./TopNav.es6"
 
@@ -11,9 +12,10 @@ var App = React.createClass({
       text: m
     };
   },
+  // Show an example of a component that interacts with a REST server
   componentWillMount() {
-    // Make a request for a user with a given ID
-    axios.get('/rest/a')
+    // Make a request for
+    axios.post('/rest/a',{ name: "Bruce" })
       .then(function(response) {
         console.log(response.data);
         // Bring the state across.  Doing this to validate that the setState
@@ -29,6 +31,7 @@ var App = React.createClass({
       <div>
         <TopNav/>
         <h1>Hello World: {this.state.text}</h1>
+        <i className="fa fa-camera-retro"></i>
       </div>
     );
   }

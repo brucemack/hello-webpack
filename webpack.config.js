@@ -13,6 +13,10 @@ module.exports = {
     resolve: {
       extensions: ['','.js','.jsx','.es6']
     },
+    // We do this to allow all REST calls to pass through to a real application
+    // server.  For real production applications the static content would
+    // be served by the application server as well, but for development its
+    // more convenient to have it served by the Webpack server.
     devServer: {
       proxy: {
         "/rest/*": {
@@ -30,7 +34,9 @@ module.exports = {
         // The Bootstrap installed via NPM
         { from: 'node_modules/bootstrap/dist', to: 'assets/bootstrap' },
         // The jQuery installed via NPM
-        { from: 'node_modules/jquery/dist', to: 'assets/jquery' }
+        { from: 'node_modules/jquery/dist', to: 'assets/jquery' },
+        // The Bootstrap installed via NPM
+        { from: 'ext/font-awesome', to: 'assets/font-awesome' }
       ])
     ],
     module: {
