@@ -17,13 +17,9 @@ var App = React.createClass({
     // Make a request for
     axios.post('/rest/a',{ name: "Bruce" })
       .then(function(response) {
-        console.log(response.data);
-        // Bring the state across.  Doing this to validate that the setState
-        // function is bound properly.
         this.setState({ text: response.data.text });
       }.bind(this))
       .catch(function(response) {
-        console.log(response);
       }.bind(this));
   },
   render() {
@@ -31,6 +27,7 @@ var App = React.createClass({
       <div>
         <TopNav/>
         <h1>Hello World: {this.state.text}</h1>
+        <p>Demo of Font Awesome:</p>
         <i className="fa fa-camera-retro"></i>
       </div>
     );
