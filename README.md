@@ -9,10 +9,11 @@ Getting Setup
 -------------
 
 1. Git checkout
-1. (If necessary) npm install -g nodemon
-1. (If necessary) npm install -g webpack
+1. Make sure you have Node and NPM installed
+1. (If necessary, one-time install) npm install -g nodemon
+1. (If necessary, one-time install) npm install -g webpack
 1. Type: npm install
-1. Get the Node.JS server running in one window: node app-server/index.js
+1. Get the Node.JS server running in one window: nodemon app-server/index.js
 1. Get the Webpack development server running in another window: npm run dev
 1. Point your browser to http://localhost:8080/webpack-dev-server/
 
