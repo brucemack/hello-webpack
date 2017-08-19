@@ -11,7 +11,7 @@ module.exports = {
         filename: "bundle.js"
     },
     resolve: {
-      extensions: ['','.js','.jsx','.es6']
+      extensions: [ '.js', '.jsx', '.es6' ]
     },
     // We do this to allow all REST calls to pass through to a real application
     // server.  For real production applications the static content would
@@ -35,8 +35,9 @@ module.exports = {
         { from: 'node_modules/bootstrap/dist', to: 'assets/bootstrap' },
         // The jQuery installed via NPM
         { from: 'node_modules/jquery/dist', to: 'assets/jquery' },
-        // The Bootstrap installed via NPM
-        { from: 'ext/font-awesome', to: 'assets/font-awesome' }
+        // The Font Awesome installed via NPM
+        { from: 'node_modules/font-awesome/css', to: 'assets/font-awesome/css' },
+        { from: 'node_modules/font-awesome/fonts', to: 'assets/font-awesome/fonts' }
       ])
     ],
     module: {
@@ -46,7 +47,7 @@ module.exports = {
         {
           test: /\.es6?$/,
           exclude: /(node_modules|bower_components|dist|.git)/,
-          loader: 'babel',
+          loader: 'babel-loader',
           exclude: "/node_modules/",
           query: {
             cacheDirectory: true,
