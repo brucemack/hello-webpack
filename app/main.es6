@@ -29,6 +29,7 @@ var App = React.createClass({
         <h1>Hello World: {this.state.text}</h1>
         <p>Demo of Font Awesome:</p>
         <i className="fa fa-camera-retro"></i>
+        <p className="test1">Hello Red?</p>
       </div>
     );
   }
